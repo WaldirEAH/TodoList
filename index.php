@@ -1,3 +1,6 @@
+<?php
+ require 'baseDeDatos/db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,8 +16,8 @@
         <h3>inicie sesion</h3> 
         o <a href="registro.php">registrese</a>
         <form action="index.php" method="post">
-            <input type="text" name="email"  placeholder="ingrese su correo">
-            <input type="password" name="contraseña" placeholder="ingrese su contraseña">
+            <input type="text" name="email"  placeholder="ingrese su correo" required>
+            <input type="password" name="contraseña" placeholder="ingrese su contraseña" required>
             <input type="submit" value="ingresar">
         </form>
     
