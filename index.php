@@ -5,6 +5,7 @@ session_start();
     header("Location: app/list.php");
     print $_SESSION['email'];
  }else{
+      
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
         $records = $conn->prepare('SELECT nombre, apellidop,apellidom, email, password FROM tusuario  WHERE email = :email');
         $records->bindParam(':email', $_POST['email']);
@@ -13,11 +14,12 @@ session_start();
     
         $mensaje = '';
     
-        if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
+        if (isset($results['password']) && password_verify($_POST['password'], $results['password'])) {
           $_SESSION['email'] = $results['email'];
           header("Location: app/list.php");
+          
         } else {
-          $mensaje = 'datos incorrects';
+          $mensaje = 'datos incorrectos';
         }
       }
     ?>
@@ -41,7 +43,7 @@ session_start();
                 <input type="submit" value="ingresar">
             </form>
             <?php if(!empty($mensaje)): ?>
-      <p> <?= $message ?></p>
+      <p> <?= $mensaje ?></p>
     <?php endif; ?>
         
         
