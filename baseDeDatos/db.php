@@ -9,5 +9,11 @@ try {
 } catch (PDOException $e) {
     die('fallo de coneccion: '.$e->getMessage());
 }
+$conn2 =mysqli_connect(
+    'localhost',
+    'root',
+    '',
+    'todolist',
+)
 
 ?>
