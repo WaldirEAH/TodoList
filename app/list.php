@@ -35,10 +35,12 @@ if (isset($_SESSION['email'])) {
                     </tr>
                 </thead>
                 <?php
+                $cont=0;
                 while ($lista = mysqli_fetch_array($result)) {
+                    $cont++;
                 ?>
                     <tr class="tconte">
-                        <td><?php echo $lista['id'] ?></td>
+                        <td><?php echo $cont ?></td>
                         <td><?php echo $lista['tarea'] ?></td>
                         <td>
                             <div class="butones">
@@ -46,8 +48,9 @@ if (isset($_SESSION['email'])) {
                                 <form action=""class="btn">
                                     <button type="button"class="btn_editar">editar</button>
                                 </form>
-                                <form action=""class="btn">
-                                    <button type="button"class="btn_eliminar">eliminar</button>
+                                <form action="" class="btn">
+                                    <a href="eliminar_tarea.php?id=<?php echo $lista['id']?>"><button type="button"class="btn_eliminar">eliminar</button></a>
+                                    
                                 </form>
                             </div>
                         </td>
@@ -57,7 +60,13 @@ if (isset($_SESSION['email'])) {
                 ?>
             </table>
         </div>
-        <a href="cerrarsesion.php">cerrar sesion</a>
+        <div class="nuevo">
+    
+            <form action=""class="btn_fnuevo">
+                <button type="button"class="btn_nuevo">Nueva tarea</button>
+            </form>
+            <a href="cerrarsesion.php">cerrar sesion</a>
+        </div>
     </body>
 
     </html>

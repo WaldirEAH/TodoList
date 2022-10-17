@@ -55,7 +55,7 @@ tr:nth-child(even){
 .butones >.btn{
     display:inline;
 }
-.btn_editar {
+.btn_editar,.btn_nuevo {
     background-color:#0F79FB;
     padding: 20px;
 
@@ -74,9 +74,14 @@ tr:nth-child(even){
     font-size: 20px;
     
 }
-.btn_editar:hover{
+.btn_editar:hover,.btn_nuevo:hover{
     background-color: #56a2ff;
 }
 .btn_eliminar:hover{
     background-color: rgb(255, 93, 93);
+}
+.nuevo  {
+    margin: auto;
+    width: 90%;
+    text-align: left;
 }
