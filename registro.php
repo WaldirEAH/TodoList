@@ -11,7 +11,7 @@
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':nombre', $_POST['nombre']);
         $stmt->bindParam(':apellidop', $_POST['apellidop']);
-        $stmt->bindParam(':apellidom', $_POST['apellidop']);
+        $stmt->bindParam(':apellidom', $_POST['apellidom']);
         $stmt->bindParam(':email', $_POST['email']);
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         $stmt->bindParam(':password', $password);
