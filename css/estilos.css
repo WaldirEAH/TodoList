@@ -16,7 +16,7 @@ input[type="text"],input[type="password"]{
 input[type="submit"]{
     padding: 10px;
     color: #fff;
-    background-color: rgb(90, 90, 90);
+    background-color: #0F79FB;
     width: 320px;
     margin: 20px auto;
     margin-top: 0;
@@ -63,6 +63,7 @@ tr:nth-child(even){
     border: none;
     color: white;
     font-size: 20px;
+    cursor: pointer;
 }
 .btn_eliminar {
     background-color:red;
@@ -72,6 +73,7 @@ tr:nth-child(even){
     border: none;
     color: white;
     font-size: 20px;
+    cursor: pointer;
     
 }
 .btn_editar:hover,.btn_nuevo:hover{
@@ -85,3 +87,4 @@ tr:nth-child(even){
     width: 90%;
     text-align: left;
 }
+/*editar*/

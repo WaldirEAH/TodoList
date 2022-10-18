@@ -1,0 +1,45 @@
+.form-container{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+
+}
+.formu{
+    margin: auto;
+    display: inline;
+}
+.editar#editar_t{
+    background-color: #0F79FB;
+    width: auto;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    
+}
+.cancel_edt{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 20px;
+    width: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.form_edit > .tarea{
+    width: 900px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 2em;
+
+}
+.btn-cerrar{
+    margin: auto;
+    
+}

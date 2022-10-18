@@ -22,7 +22,7 @@ if (isset($_SESSION['email'])) {
 
     <body>
         <div class="contenedor">
-            <h1 class="nombre"><?php print $nombre;?></h1>
+            <h1 class="nombre"><?php print $nombre; ?></h1>
 
             <table>
 
@@ -35,7 +35,7 @@ if (isset($_SESSION['email'])) {
                     </tr>
                 </thead>
                 <?php
-                $cont=0;
+                $cont = 0;
                 while ($lista = mysqli_fetch_array($result)) {
                     $cont++;
                 ?>
@@ -45,14 +45,15 @@ if (isset($_SESSION['email'])) {
                         <td>
                             <div class="butones">
 
-                                <form action=""class="btn">
-                                    <button type="button"class="btn_editar">editar</button>
+                                <form action="" class="btn">
+                                    <a href="editar_tarea.php?id=<?php echo $lista['id'] ?>"><button type="button" class="btn_editar">editar</button></a>
+
                                 </form>
                                 <form action="" class="btn">
-                                    <a href="eliminar_tarea.php?id=<?php echo $lista['id']?>"><button type="button"class="btn_eliminar">eliminar</button></a>
-                                    
+                                    <a href="eliminar_tarea.php?id=<?php echo $lista['id'] ?>"><button type="button" class="btn_eliminar">eliminar</button></a>
                                 </form>
                             </div>
+
                         </td>
                     </tr>
                 <?php
@@ -61,11 +62,22 @@ if (isset($_SESSION['email'])) {
             </table>
         </div>
         <div class="nuevo">
-    
-            <form action=""class="btn_fnuevo">
-                <button type="button"class="btn_nuevo">Nueva tarea</button>
+
+            <form action="" class="btn_fnuevo">
+                <button type="button" class="btn_nuevo">Nueva tarea</button>
             </form>
             <a href="cerrarsesion.php">cerrar sesion</a>
+            <?php switch ($_GET['mess']) {
+                case 0:
+                    echo "edicion correcta";
+                    break;
+                case 1:
+                    echo "eliminacion correcta";
+                    break;
+                case 2:
+                    echo "i es igual a 2";
+                    break;
+            } ?>
         </div>
     </body>
 

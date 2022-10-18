@@ -1,6 +1,6 @@
 <?php
 session_start();
- require 'baseDeDatos/db.php';
+  require 'baseDeDatos/db.php';
  if(isset($_SESSION['email'])){
     header("Location: app/list.php");
     print $_SESSION['email'];
