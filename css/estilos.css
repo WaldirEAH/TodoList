@@ -87,4 +87,81 @@ tr:nth-child(even){
     width: 90%;
     text-align: left;
 }
-/*editar*/
+/*modal*/
+.boton-modal label{
+    padding: 1.3em;
+    background-color: rgb(0, 140, 255);
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+.btn-cerrar label{
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+#btn-modal{
+    display: none;
+    
+}
+.modal{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+
+}
+#btn-modal:checked ~ .modal{
+    display: flex;
+}
+
+
+.modal__container{
+    margin: auto;
+    gap: 3px;
+}
+.form_nuevo > .tarea{
+    width: 1000px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 2em;
+
+}
+.form_nuevo{
+    display: flex;
+    gap: 10px;
+}
+.butones{
+    display: flex;
+    gap: 10px;
+}
+.agregar#agregar{
+    width: auto;
+    padding: 1.3em;
+    padding-top: 10px;
+    background-color: rgb(0, 140, 255);
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    margin: 20px auto;
+    font-size:15px ;
+    
+}
+.cancelar_l{
+    color: white;
+    padding: 1.3em;
+    background-color: red;
+    border-radius: 5px;
+    text-decoration: none;
+}

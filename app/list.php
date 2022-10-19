@@ -62,22 +62,37 @@ if (isset($_SESSION['email'])) {
             </table>
         </div>
         <div class="nuevo">
+            
+            <?php ?>
+            <input type="checkbox" id="btn-modal">
+            <div class="butones">
+                <div class="boton-modal">
+                    <label for="btn-modal">
+                        Nuevo
+                    </label>
+                </div>
+                <div class="cerrar_session">
+                    <a href="cerrarsesion.php">cerrar sesion</a>
+                </div>
+            </div>
+            <div class="modal" id="modal">
+                <div class="modal__container">
+                    <div class="formu">
 
-            <form action="" class="btn_fnuevo">
-                <button type="button" class="btn_nuevo">Nueva tarea</button>
-            </form>
-            <a href="cerrarsesion.php">cerrar sesion</a>
-            <?php switch ($_GET['mess']) {
-                case 0:
-                    echo "edicion correcta";
-                    break;
-                case 1:
-                    echo "eliminacion correcta";
-                    break;
-                case 2:
-                    echo "i es igual a 2";
-                    break;
-            } ?>
+                        <form class="form_nuevo" action="guardar_tarea.php" method="POST">
+                            <input type="text" name="tarea" id="tarea" class="tarea" value="" placeholder="escribir tarea">
+                            <input type="submit" value="agregar" class="agregar" id="agregar">
+                        </form>
+                    </div>
+                    <br>
+                    <div class="btn-cerrar">
+                        <label for="btn-modal" type="reset"><a href="" class="cancelar_l">cancelar</a></button></label>
+                        
+                    </div>
+                    </form>
+
+                </div>
+            </div>
         </div>
     </body>
 

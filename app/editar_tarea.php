@@ -13,10 +13,10 @@
  if(isset($_POST['editar'])){
     $idac=$_GET['id'];
     $tareac=$_POST['tarea'];
-    $num=0;
+    $mess="edicion correcta";
     $sql2="UPDATE ttarea set tarea='$tareac' Where id=$idac";
     mysqli_query($conn2,$sql2);
-    header("Location: ../app/list.php?mess=$num");
+    header("Location: ../app/list.php?mess=$mess");
 
  }
 ?>
