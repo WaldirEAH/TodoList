@@ -61,6 +61,7 @@ if (isset($_SESSION['email'])) {
                 ?>
             </table>
         </div>
+        <br>
         <div class="nuevo">
             
             <?php ?>
@@ -71,6 +72,7 @@ if (isset($_SESSION['email'])) {
                         Nuevo
                     </label>
                 </div>
+                <br><br><br><br>
                 <div class="cerrar_session">
                     <a href="cerrarsesion.php">cerrar sesion</a>
                 </div>
