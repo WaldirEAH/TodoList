@@ -26,6 +26,8 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `ttarea`
 --
+CREATE DATABASE todolist
+USE todolist
 
 CREATE TABLE `ttarea` (
   `id` int(11) NOT NULL,
